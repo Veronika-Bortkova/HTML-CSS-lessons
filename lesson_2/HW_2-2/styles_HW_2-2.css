@@ -1,0 +1,25 @@
+body{
+    background: #f8c899;
+
+}
+.element{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 1s;
+}
+.conteyner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*gap: 30px;*/
+    /*padding-top: 40px;*/
+    height: 100vh;
+
+}
+
+.element:hover {
+    border-radius: 50%;
+    background: #12259e;
+    transition: 2s;
+}
