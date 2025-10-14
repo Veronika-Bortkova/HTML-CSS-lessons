@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Oswald:wght@200..700&display=swap');
+.licorice{
+    font-family: "Licorice", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.oswald-400 {
+    font-family: "Oswald", sans-serif;
+    /*font-optical-sizing: auto;*/
+    /*font-weight: <weight>;*/
+    /*font-style: normal;*/
+}
+.bbh{
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
