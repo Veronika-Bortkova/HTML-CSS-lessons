@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+           box-sizing: border-box;
+        }
+        label{
+            display: block;
+            margin-top: 10px;
+
+        }
+        form sup{
+            font-size: 20px;
+            /*height: 30px;*/
+            color: red;
+            /*background: #1eac2a;*/
+            /*padding-top: 30px;*/
+        }
+        textarea{
+            resize: none;
+            width: 150px;
+            height: 100px;
+        }
+        /*form input:last-of-type {*/
+        /*    width: 177px;*/
+        /*}*/
+        form{
+            border: 3px solid lightseagreen;
+            width: 30%;
+            border-radius: 20px;
+            padding: 50px;
+        }
+        input[type=text] {
+            background: lightcyan;
+            border: 2px solid #15c9da;
+            border-radius: 5px;
+            color: #002681;
+            font-family: "Calibri Light";
+
+        }
+        input[type="text"]::placeholder {
+            color: #fb6102;
+        }
+        input[type="text"]:focus{
+            outline: 2px solid #336ffb;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="name">Введите имя</label>
+    <input type="text" name="name"  id="name" placeholder="Enter your name" required> <sup>*</sup>
+
+    <label for="email">Введите email</label>
+    <input type="email" name="email"  id="email" placeholder="Enter your email" required> <sup>*</sup>
+
+    <label for="password">Введите пароль</label>
+    <input type="password" name="password"  id="password" placeholder="Enter your password" required> <sup>*</sup>
+
+    <label for="password">Введите возраст</label>
+    <input type="number" name="age"  id="age" placeholder="Enter your age" min="18" max="120">
+
+    <label>Введите Ваш пол</label>
+    <label><input type="radio" name="gender" value="man">Мужской</label>
+    <label><input type="radio" name="gender" value="woman">Женский</label>
+    <label><input type="checkbox" name="newletter">Подписатьна на новости</label>
+    <label  for="city">Город</label>
+        <select id="city">
+            <option></option>
+            <option value="Ky">Киев</option>
+            <option value="Kh">Харьков</option>
+            <option value="Po">Полтава</option>
+
+        </select>
+    <label for="matereal">материалі
+        <select id="matereal">
+        <optgroup label="кирпич">
+            <option value="wite">белий</option>
+            <option value="red">красній</option>
+        </optgroup>
+        <optgroup label="Цемент">
+            <option value="witeс">белий</option>
+            <option value="grey">серій</option>
+        </optgroup>
+    </select>
+    </label>
+    <label for="cooment">Komment</label>
+    <textarea name="" id="cooment" cols="30" rows="4"></textarea>
+    <div>
+        <input type="submit">
+        <input type="reset">
+    </div>
+
+</form>
+
+</body>
+</html>

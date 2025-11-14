@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: #1E1E1E;
+}
+.wrapper_left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.wrapper_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scale: 1.2;
+}
+.wrapper_all{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.head{
+    margin: -19px;
+    rotate: 0deg;
+    animation: head_rotate 2s linear infinite alternate;
+}
+@keyframes head_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        rotate: -15deg;
+    }
+
+}
+@keyframes star_color {
+    from {
+        /*opacity: 1;*/
+    }
+    to {
+        /*opacity: 0;*/
+        /*box-shadow: inset 0 0 20px #fffe76;*/
+        box-shadow: 0 0 35px #fffe76;
+        background: rgba(255, 254, 118, 0.38);
+    }
+}
+.star{
+    animation: star_color 2s linear infinite alternate;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes text_green {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.2;
+    }
+}
+.text2{
+    animation: text_green 2s linear infinite alternate;
+}
+.green_ball{
+    scale: 1.2;
+    border-radius: 50%;
+    animation: green_ball_rotate 2s linear infinite, green_ball_shadow 2s linear infinite alternate, green_ball_moving 10s linear;
+}
+@keyframes green_ball_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes green_ball_shadow {
+    from {
+        ;
+    }
+    to {
+        box-shadow: 0 0 35px rgb(166, 255, 172);
+        background: rgba(142, 255, 150, 0.23);
+    }
+}
+@keyframes green_ball_moving {
+    from {
+        transform: translate(0,0);
+    }
+    10% {
+        transform: translate(-70px,70px);
+    }
+    30% {
+        transform: translate(-20px,280px);
+    }
+    50% {
+        transform: translate(550px,200px);
+    }
+    60% {
+        transform: translate(540px,-100px);
+    }
+    70% {
+        transform: translate(550px,-220px);
+    }
+    80% {
+        transform: translate(378px,-210px);
+    }
+    100% {
+        transform: translate(378px,-10px);
+    }
+
+}

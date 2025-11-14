@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 27fr 46fr 27fr;
+            grid-template-rows: 22fr 56fr 22fr;
+            grid-template-areas:
+        "header header header"
+        "left_aside main right_aside"
+        "footer footer footer"
+        ;
+
+        }
+        header{
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: #D9D9D9;
+            align-items: center;
+        }
+        header button{
+            background: #1eac2a;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+            width: 120px;
+            height: 50px;
+        }
+        .left_aside{
+            grid-area: left_aside;
+            background: #C0BDBD;
+        }
+        .right_aside{
+            grid-area: right_aside;
+            background: #C0BDBD;
+        }
+        main{
+            grid-area: main;
+            background: #A4A4A4;
+        }
+        footer{
+            grid-area: footer;
+            background: #D9D9D9;
+        }
+        @media screen and (max-width: 480px){
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas:
+            "header header"
+            "left_aside right_aside"
+            "main main"
+            "footer footer"
+            ;
+
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <button>HELLO</button>
+        </header>
+        <aside class="left_aside"></aside>
+        <main></main>
+        <aside class="right_aside"></aside>
+        <footer></footer>
+    </div>
+
+</body>
+</html>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    background: #1E1E1E;
+}
+.wrapper_w1340px{
+    width: 1340px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 36px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 59px;
+}
+ul a{
+    font-family: Bowlby One, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 97%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #E9E3DC;
+}
+.nav__active-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 203px;
+    height: 60px;
+    background: #B3A0CD;
+    color: #1E1E1E;
+}
+/*-----------------------------------------------------------------*/
+.header_titl_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1255px;
+    /*height: 285px;*/
+    margin: 74px auto 33px auto;
+    font-family: Bowlby One;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 107.09px;
+    leading-trim: NONE;
+    line-height: 89%;
+    letter-spacing: -2%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E9E3DC;
+}
+.header_img{
+    display: block;
+    margin: 0 auto;
+}
+/*--------------------------------------------------*/
+.section_the_burger_above{
+    padding: 100px 149px 85px 109px;
+    width: 1340px;
+    height: 369px;
+    border-radius: 30px;
+    border: 4px solid #1E1E1E; /*можна було не вказувати, тому що фон такого ж коліру, але в фігмі була рамка, тому вказала*/
+    background: #D1EF53;
+    margin: 32px auto 64px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p1__section_the_burger_above{
+    width: 533px;
+    font-family: Bowlby One, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 70px;
+    line-height: 89%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+}
+.p2-buttom__section_the_burger_above{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+    padding-bottom: 15px;
+}
+.p2{
+    width: 521px;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -2%;
+    color: #1E1E1E;
+
+}
+.button_About_Us{
+    font-family: Bowlby One,sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 97%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+    width: 176px;
+    height: 60px;
+    border: 4px solid #1E1E1E;
+    box-shadow: 8px 8px 0px 0px #000000;
+    background: #E9E3DC;
+}
+
+/*-------------------------------------------------------------*/
+.foto_fries_foto_burgers, .foto_bottom{
+margin-bottom: 64px;
+}
+/*--------------------------------------------------------------*/
+.section_botton{
+    width: 895px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0px auto 36px auto;
+}
+.section_botton h2{
+    font-family: Bowlby One,sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 102%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E9E3DC;
+}
+.section_botton button{
+    width: 196px;
+    height: 60px;
+    background: #D1EF53;
+    font-family: Bowlby One,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 97%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}

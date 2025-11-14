@@ -1,0 +1,23 @@
+.green_box{
+    width: 200px;
+    height: 200px;
+    background: #1eac2a;
+    margin: 100px auto 0 auto;
+    animation: color_1 5s linear infinite alternate;
+}
+@keyframes color_1 {
+    from{
+        /*transform: scale(1.5) rotate(60deg);*/
+        transform: translate(300px, 200px);
+    }
+    /*40%{*/
+    /*    border-radius: 20%;*/
+    /*    !*transform: rotate(-60deg);*!*/
+    /*    transform: scaleX(2);*/
+    /*}*/
+    /*to{*/
+    /*    background: #fffc00;*/
+    /*    scale: 1;*/
+    /*    transform: rotate(0deg);*/
+    /*}*/
+    }

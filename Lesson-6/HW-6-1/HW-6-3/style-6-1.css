@@ -1,0 +1,22 @@
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+.blok-1 ul li:nth-child(even){
+    color: pink;
+}
+.blok-2 ul li:nth-child(odd){
+    font-size: 22px;
+}
+.blok-3 ul li:nth-child(2n+4)::after{
+        content: "!";
+}
+.blok-4 ul li:last-child{
+    color: violet;
+}
+.blok-5 ul li::first-letter{
+    color: red;
+    font-size: 30px;
+}
+.blok-6 ul {}

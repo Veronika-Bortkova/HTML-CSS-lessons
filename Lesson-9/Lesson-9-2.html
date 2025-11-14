@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid_container{
+            display: grid;
+            height: 400px;
+            background: #afb1ae;
+            border: 1px solid black;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .item{
+            background: #90ff96;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: #15c9da 5px solid;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="item"><span>1</span></div>
+        <div class="item"><span>2</span></div>
+        <div class="item"><span>3</span></div>
+        <div class="item"><span>4</span></div>
+        <div class="item"><span>5</span></div>
+        <div class="item"><span>6</span></div>
+    </div>
+</body>
+</html>

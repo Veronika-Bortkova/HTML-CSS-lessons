@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+header, footer, section{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background: #8D8484;
+    color: #000000;
+}
+footer{
+    background: #BDBDBD;
+    color: #000000;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.main_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 73vw;
+}
+.spam{
+    width: 27vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    width: 100%;
+    color: #ffffff;
+}
+.section_1{
+    background: #776969;
+}
+.section_2{
+    background: #643030;
+}
+.section_3{
+    background: #441818;
+}
+.aside_1, .aside_2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.aside_1{
+    background: #937575;
+}
+.aside_2{
+    background: #644C4C;
+}
+

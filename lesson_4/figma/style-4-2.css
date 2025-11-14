@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.w-1070{
+    width: 1070px;
+    margin: 0 auto;
+    /*background: #f8c899;*/
+}
+/*-------------------------header-----------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    font-family: "DM Sans", sans-serif;
+    /*background: #129e29;*/
+}
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+header nav ul a{
+    font-weight: 700;
+    font-size: 15px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -0.47px;
+    color: #696871;
+
+
+}
+.header__active_link{
+    color: #19191B;
+    border-bottom: 2px solid #5454D4;
+;
+
+
+}
+header button{
+    width: 211.02px;
+    height: 60px;
+    /*angle: 0 deg;*/
+    /*opacity: 1;*/
+    border-radius: 10px;
+    background: #FF7143;
+    border: none;
+    color: #FFFFFF;font-family: DM Sans;
+    font-weight: 700;
+    font-size: 17px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -0.53px;
+}
+/*---------------------section-top-1----------------------------*/
+.section_top_1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 68px;
+    /*background-color: #f8c899;*/
+    height: 644px;
+}
+.section_top_1 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*width: 409.4px;*/
+    /*height: 461px;*/
+    /*background-color: #3a75d5;*/
+    margin: 116px 0 67px 0;
+}
+.section_top_1 img{
+    width: 545.5px;
+    height: 644px;
+}
+.section_top_1 h1{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+    leading-trim: NONE;
+    line-height: 77px;
+    letter-spacing: -2.5px;
+    width: 439.4px;
+
+}
+.section_top_1 p{
+    font-family: Mulish;
+    font-weight: 400;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 30px;
+    letter-spacing: -0.63px;
+    color: #696871;
+    width: 409.4px;
+    margin: 30px 0 50px 0;
+}
+.section_top_1 button{
+    width: 188.2px;
+    height: 60px;
+    angle: 0 deg;
+    opacity: 1;
+    border-radius: 10px;
+    border: none;
+    background: #5454D4;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -0.53px;
+    color: #ffffff;
+}
+/*------------------------logos------------------------------*/
+.logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 132px 0 150px 0;
+    /*background: #f8c899;*/
+}
+/*-------------section-2-----------------------------------*/
+.section_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background: #3a75d5;*/
+}
+
+.section_2 img{
+    width: 348.5px;
+    height: 473px;
+    /*background: #f8c899;*/
+}
+.section_2 div{
+    /*background: #129e29;*/
+    margin: 122px 0 122px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 556px;
+    height: 229px;
+}
+.section_2 div h2{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    leading-trim: NONE;
+    line-height: 57px;
+    letter-spacing: -1.56px;
+    width: 556px;
+    height: 57px;
+}
+.section_2 p{
+    font-family: Mulish, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 30px;
+    letter-spacing: -0.63px;
+    width: 459px;
+    /*margin: 30px 0 30px 0;*/
+}
+.section_2 a{
+    font-family: DM Sans, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: #5454D4;
+}
