@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 100%;
+        }
+        .grid{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 3.8fr 1fr;
+            grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+            grid-template-areas:
+            "header header"
+            "content-1 spam-1"
+            "content-2 spam-1"
+            "content-2 spam-2"
+            "content-3 spam-2"
+            "footer footer";
+        }
+        .grid header{
+            background: #8D8484;
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+
+        }
+        .grid section:nth-child(2){
+            grid-area: content-1;
+            background: #776969;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .grid section:nth-child(3){
+            grid-area: content-2;
+            background: #643030;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .grid section:nth-child(4){
+            grid-area: content-3;
+            background: #441818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .grid aside:nth-child(5){
+            grid-area: spam-1;
+            background: #937575;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .grid aside:nth-child(6){
+            grid-area: spam-2;
+            background: #644C4C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .grid footer{
+            grid-area: footer;
+            background: #BDBDBD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <p>Header</p>
+        </header>
+        <section>
+            <p>Content - 1</p>
+        </section>
+        <section>
+            <p>Content - 1</p>
+        </section>
+        <section>
+            <p>Content - 1</p>
+        </section>
+        <aside>
+            <p>spam -1</p>
+        </aside>
+        <aside>
+            <p>spam -1</p>
+        </aside>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
