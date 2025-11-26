@@ -103,3 +103,55 @@
 
 
 // – описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив – вам потрібно подумати. Нормальних варіантів опису – 2. Варіант, коли в вас буде одновимірний масив з 21 значенням виключаємо одразу
+let temperatureStatistics = [
+    {
+        day: "M",
+        morning: 2,
+        afternoon: 5,
+        evening: 3
+    },
+
+    {
+        day: "T",
+        morning: 3,
+        afternoon: 6,
+        evening: 1
+    },
+
+    {
+        day: "W",
+        morning: 5,
+        afternoon: 7,
+        evening: 5
+    },
+
+    {
+        day: "TH",
+        morning: 3,
+        afternoon: 4,
+        evening: 1
+    },
+
+    {
+        day: "F",
+        morning: 7,
+        afternoon: 1,
+        evening: 2
+    },
+
+    {
+        day: "Sa",
+        morning: 7,
+        afternoon: 1,
+        evening: 4
+    },
+
+    {
+        day: "Su",
+        morning: 2,
+        afternoon: 1,
+        evening: 5
+    },
+];
+
+console.log(temperatureStatistics);
