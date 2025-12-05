@@ -169,3 +169,132 @@
 
 
 // Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+
+// let time = +prompt("Enter a number from 0 to 59");
+//     if (time >=0 && time<=14) {
+//         console.log("1 part");
+//     } else if (time >=15 && time<=29){
+//         console.log("2 part");
+//     } else if (time >=30 && time<=44) {
+//         console.log("3 part");
+//     } else if (time >=45 && time<=59) {
+//             console.log("4 part");
+//     } else {
+//             console.log("???");
+//     }
+
+
+
+
+// – У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину (декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+// let day = +prompt("Enter a number from 1 to 31");
+//     if (day >=1 && day<=10) {
+//         console.log("1 part");
+//     } else if (day >=11 && day<=20){
+//         console.log("2 part");
+//     } else if (day >=21 && day<=31) {
+//         console.log("3 part");
+//     } else {
+//             console.log("???");
+//     }
+
+
+
+// – Скласти розклад на тиждень за домопогою switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа, що заплановано на цей день (можна замість плану на день, назву дня англійською).
+//
+// let day_of_the_week = prompt("Enter the day of the week");
+// switch (day_of_the_week){
+//     case "Monday":
+//         console.log("Monday");
+//         break;
+//     case "Tuesday":
+//         console.log("Tuesday");
+//         break;
+//     case "Wednesday":
+//         console.log("Wednesday");
+//         break;
+//     case "Thursday":
+//         console.log("Thursday");
+//         break;
+//     case "Friday":
+//         console.log("Friday");
+//         break;
+//     case "Saturday":
+//         console.log("Saturday");
+//         break;
+//     case "Sunday":
+//         console.log("Sunday");
+//         break;
+//     default:
+//         console.log("????");
+// };
+
+//
+// – Користувач вводить або має два числа.
+//
+//     Потрібно знайти та вивести максимальне число з тих двох .
+//
+//     Також потрібно врахувати, коли введені рівні числа.
+
+//
+// let number_1 = +prompt("Enter number one");
+// let number_2 = +prompt("Enter number two");
+// if (number_1 > number_2){
+//     console.log(number_1)
+// } else if (number_1 === number_2){
+//     console.log("equal");
+// } else {
+//     console.log(number_2)
+// };
+
+
+
+
+// – є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код, який
+//
+// буде присвоювати змінній х значення “default”,  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
+
+// let x = null;
+// if (!!x === false){
+//     x = "deault";
+// }
+// console.log(x);
+
+
+
+// з файлу arrays.js ( лежить у вкладеннях)  взяти масив coursesAndDurationArray. За допомогою іф перевірити кожен його елемент на тривалість навчання. У випадку, якщо тривалість довша за 5 місяців, вивести в консоль “Супер”.
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+if (coursesAndDurationArray[0].monthDuration > 5) {
+    console.log("Супер");
+}
+if (coursesAndDurationArray[1].monthDuration > 5) {
+    console.log("Супер");
+}
+if (coursesAndDurationArray[2].monthDuration > 5) {
+    console.log("Супер");
+}
+if (coursesAndDurationArray[3].monthDuration > 5) {
+    console.log("Супер");
+}
+if (coursesAndDurationArray[4].monthDuration > 5) {
+            console.log("Супер");
+}
+if (coursesAndDurationArray[5].monthDuration > 5) {
+    console.log("Супер");
+}
+
+
+
+
+
+
+
