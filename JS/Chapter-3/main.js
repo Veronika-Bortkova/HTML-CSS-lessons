@@ -218,3 +218,129 @@
 //     }
 // }
 // console.log(arrNumber)
+
+//
+// let usersWithId = [
+//
+//     {id: 1, name: "vasya", age: 31, status: false},
+//
+// {id: 2, name: "petya", age: 30, status: true},
+//
+// {id: 3, name: "kolya", age: 29, status: true},
+//
+// {id: 4, name: "olya", age: 28, status: false}
+//
+// ];
+//
+//
+//
+// let citiesWithId = [
+//     {user_id: 3,
+//         country: "USA",
+//         city: "Portland"},
+//
+// {user_id: 1, country: "Ukraine", city: "Ternopil"},
+//
+// {user_id: 2, country: "Poland", city: "Krakow"},
+//
+// {user_id: 4, country: "USA", city: "Miami"}
+//
+// ];
+
+// З’єднати в один об’єкт користувача та місто з відповідними “id” та “user_id” .
+//
+// Записати цей об’єкт в новий масив
+//
+// Example:
+//
+//     let usersWithCities = [
+//
+//         {
+//
+//             id: 1, // <===
+//
+//             name: ‘vasya’,
+//
+// age: 31,
+//
+//     status: false,
+//
+//     address: {
+//
+//     user_id: 1, // <===
+//
+//         country: ‘Ukraine’,
+//
+//     city: ‘Ternopil’
+//
+// }
+//
+// },
+//
+// // TO BE CONTINUED …..
+//
+// ]
+//
+// // --------------------------------------------------
+// let i = -1;
+// let user_cities = {};
+// let usersWithCities = [];
+// // debugger;
+// for (const user of usersWithId) {
+//     for (const citi of citiesWithId) {
+//         if (user.id === citi.user_id) {
+//             let user_citi = {
+//             id: user.id,
+//                 age: user.age,
+//             name: user.name,
+//             status: user.status,
+//             address: {
+//                user_id: citi.user_id,
+//                country: citi.country,
+//                 city: citi.city,
+//             }
+//             }
+//
+//             usersWithCities[usersWithCities.length] = user_citi;
+//         }
+//     }
+// }
+// console.log(usersWithCities);
+//-----------------------------------------------------------------------------------
+
+
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// let arr2 = [];
+// for (const arrElement of arr) {
+//     if (arrElement % 2 === 0) {
+//         arr2[arr2.length] = arrElement;
+//     }
+// }
+// console.log(arr2)
+
+//
+// // -------------------------------------------------------------------------------
+// let world = "";
+// let arr = ["a", "b","c"];
+// for (let i = 0; i < arr.length; i++) {
+//     const arrElement = arr[i];
+//         world = world + arrElement;
+// }
+// console.log(world);
+// ------------------------------------------------------------------------------------
+//
+//  let arr = ["a", "b","c"];
+//  let i = 0;
+// let world = "";
+//  while (i<arr.length){
+//      world = world+arr[i];
+//      i++;
+//  }
+//  console.log(world);
+// -----------------------------------------------------------------------------------------------
+let arr = ["a", "b","c"];
+let world = "";
+for (const string of arr) {
+    world = world+string;
+}
+console.log(world);
