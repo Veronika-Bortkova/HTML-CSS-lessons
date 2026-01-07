@@ -112,7 +112,7 @@
 // sortNums(nums,’descending’) // [21,11,3]
 
 // let arrNumbs = [ 11,21,3];
-// function sortNums(arr,direction ){
+// function sortNums(arr,direction){
 //     if (direction === "top"){
 //        return   arr.sort((a,b) => b-a);
 //     } if (direction === "buttom") {
