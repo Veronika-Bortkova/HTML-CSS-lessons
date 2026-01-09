@@ -265,6 +265,32 @@ console.log(arr_2);
 
 let arr_3 = arr.myFilter(((value, index) => value>10&&index>1));
 console.log(arr_3);
+let arrG = [];
+arr.forEach(value => {
+
+    if (value>10){
+        arrG.push(value);
+    }
+})
+console.log(arrG);
+
+
+arr_7 = arr.map(value => {
+    if (value>10) return value
+});
+console.log(arr_7);// вернет [undefined, 20, 30]
+
+arr_8 = arr.map(value => value*10);
+console.log(arr_8);
+
+
+let arr9 = [10, 20, 30];
+
+arr9.myForeach((value, index, array) => {
+    console.log("Элемент:", value, "Индекс:", index, "Массив:", array);
+});
+
+
 
 
 
