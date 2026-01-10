@@ -141,34 +141,64 @@
 // copy.foo();
 // example.foo();
 //-------------------------------------------------мое решение с байндом
-function deepCopy1 (obj){
-    if (obj) {
-        let copyObject = JSON.parse(JSON.stringify(obj));
-        for (const key in obj) {
-            if (typeof obj[key] === "function") {
-                copyObject[key] = obj[key].bind(copyObject);
-            }
-        }
-
-        return copyObject;
-    }
-}
-
-let example1 = {
-    name: "Nica",
-    age: 46,
-    greeting (){
-        console.log(`Hi ${this.name}`);
-    },
-    foo (){
-        console.log("JJJJJ");
-    }
-};
-let copy1 = deepCopy1(example1);
-console.log(copy1);
-
-copy1.greeting();
-console.log(copy1.greeting === example1.greeting);//=> false перевіряю що це дійсно не одна
-copy1.foo();
-
+// function deepCopy1 (obj){
+//     if (obj) {
+//         let copyObject = JSON.parse(JSON.stringify(obj));
+//         for (const key in obj) {
+//             if (typeof obj[key] === "function") {
+//                 copyObject[key] = obj[key].bind(copyObject);
+//             }
+//         }
+//
+//         return copyObject;
+//     }
+//     throw new Error('!!!!!')
+// }
+//
+// let example1 = {
+//     name: "Nica",
+//     age: 46,
+//     greeting (){
+//         console.log(`Hi ${this.name}`);
+//     },
+//     foo (){
+//         console.log("JJJJJ");
+//     }
+// };
+// let copy1 = deepCopy1(example1);
+// console.log(copy1);
+//
+// copy1.greeting();
+// console.log(copy1.greeting === example1.greeting);//=> false перевіряю що це дійсно не одна
+// copy1.foo();
+// // let copy2 = deepCopy1(NaN);
 //--------------------------
+
+// // за допомогою map перетворити кожен елемент на наступний тип {id,title,monthDuration
+// //
+// //     Зробити все ВИКЛЮЧНО за допомогою інлайн конструкції
+
+let coursesAndDurationArray = [
+
+    {title: "JavaScript Complex", monthDuration: 5},
+
+{title: "Java Complex", monthDuration: 6},
+
+{title: "Python Complex", monthDuration: 6},
+
+{title: "QA Complex", monthDuration: 4},
+
+{title: "FullStack", monthDuration: 7},
+
+{title: "Frontend", monthDuration: 4}
+]
+
+let newArr = coursesAndDurationArray.map((course, index)=>({
+    title: course.title,
+    monthDuration: course.monthDuration,
+    id:index+1
+}));
+
+console.log(newArr === coursesAndDurationArray);
+console.log(newArr);
+console.log(coursesAndDurationArray);
