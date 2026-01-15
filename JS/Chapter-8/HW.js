@@ -141,64 +141,82 @@
 // copy.foo();
 // example.foo();
 //-------------------------------------------------мое решение с байндом
-// function deepCopy1 (obj){
-//     if (obj) {
-//         let copyObject = JSON.parse(JSON.stringify(obj));
-//         for (const key in obj) {
-//             if (typeof obj[key] === "function") {
-//                 copyObject[key] = obj[key].bind(copyObject);
-//             }
-//         }
-//
-//         return copyObject;
-//     }
-//     throw new Error('!!!!!')
-// }
-//
-// let example1 = {
-//     name: "Nica",
-//     age: 46,
-//     greeting (){
-//         console.log(`Hi ${this.name}`);
-//     },
-//     foo (){
-//         console.log("JJJJJ");
-//     }
-// };
-// let copy1 = deepCopy1(example1);
-// console.log(copy1);
+function deepCopy1 (obj){
+    if (obj) {
+        let copyObject = JSON.parse(JSON.stringify(obj));
+        for (const key in obj) {
+            if (typeof obj[key] === "function") {
+                copyObject[key] = obj[key].bind(copyObject);
+            }
+        }
+
+        return copyObject;
+    }
+    throw new Error('!!!!!')
+}
+
+let example1 = {
+    name: ["Nica", "Mjj", [2,3,{my:["user","jkjk"]}]],
+    age: 46,
+    greeting (){
+        console.log(`Hi ${this.name}`);
+    },
+    foo (){
+        console.log("JJJJJ");
+    }
+};
+
+let copy1 = deepCopy1(example1);
+console.log(copy1);
+console.log(copy1 === example1);
+console.log(copy1.name[2][2].my === example1.name[2][2].my);
+
+console.log(copy1.name[2][2].my);
+console.log(example1.name[2][2].my);
+console.log(Object.is(copy1.name[2][2].my, example1.name[2][2].my));
+
+
+// let copy2 = structuredClone(example1);
+// console.log(copy2);
 //
 // copy1.greeting();
 // console.log(copy1.greeting === example1.greeting);//=> false перевіряю що це дійсно не одна
 // copy1.foo();
+// console.log(copy1.arr === example1.arr);
 // // let copy2 = deepCopy1(NaN);
-//--------------------------
+// //--------------------------
 
 // // за допомогою map перетворити кожен елемент на наступний тип {id,title,monthDuration
 // //
 // //     Зробити все ВИКЛЮЧНО за допомогою інлайн конструкції
 
-let coursesAndDurationArray = [
+// let coursesAndDurationArray = [
+//
+//     {title: "JavaScript Complex", monthDuration: 5, arr: ["12","14"]},
+//
+// {title: "Java Complex", monthDuration: 6},
+//
+// {title: "Python Complex", monthDuration: 6},
+//
+// {title: "QA Complex", monthDuration: 4},
+//
+// {title: "FullStack", monthDuration: 7},
+//
+// {title: "Frontend", monthDuration: 4}
+// ]
+//
+// let newArr = coursesAndDurationArray.map((course, index)=>({...course, id:index+1}));
+//
+// console.log(newArr === coursesAndDurationArray);
+// console.log(newArr);
+// console.log(coursesAndDurationArray);
+// console.log(coursesAndDurationArray.arr === newArr.arr)
 
-    {title: "JavaScript Complex", monthDuration: 5},
-
-{title: "Java Complex", monthDuration: 6},
-
-{title: "Python Complex", monthDuration: 6},
-
-{title: "QA Complex", monthDuration: 4},
-
-{title: "FullStack", monthDuration: 7},
-
-{title: "Frontend", monthDuration: 4}
-]
-
-let newArr = coursesAndDurationArray.map((course, index)=>({
-    title: course.title,
-    monthDuration: course.monthDuration,
-    id:index+1
-}));
-
-console.log(newArr === coursesAndDurationArray);
-console.log(newArr);
-console.log(coursesAndDurationArray);
+// let example1 = {
+//     name: ["Nica", "Mjj"],
+//     age: 46,
+// }
+//
+// let clon1 = JSON.stringify(example1);
+// let clon2 = JSON.parse(clon1);
+// console.log(example1.name === clon2.name);
