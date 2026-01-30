@@ -17,8 +17,9 @@
         /*    height: 30px;*/
         /*    font-size: 20px;*/
         /*}*/
-        div{
+        div, #next, #prev{
             font-size: 30px;
+            margin-right: 15px;
         }
         form, input{
             font-size: 30px;
@@ -41,6 +42,16 @@
             justify-content: center;
             align-items: center;
         }
+        #price{
+            margin-bottom: 20px;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -76,6 +87,9 @@
 <!--</form>-->
 
 <div id="price" >100 грн</div>
+
+<button id="prev" >prev</button>
+<button id="next" >next</button>
 
 
 
