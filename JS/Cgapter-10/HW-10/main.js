@@ -122,16 +122,86 @@
 //     p.innerText = resalt;
 // })
 
-let input = document.getElementsByName("conv")[0];
-input.addEventListener("input", function (){
-    let oldP = document.querySelector("p");
-    if (oldP) oldP.remove();
-    let p = document.createElement("p");
-    let kg = input.value;
-    let funt = kg*2.20462;
-    p.innerText = kg + " кг = " + funt + " фунтов";
-    document.body.append(p);
-    }
-)
+// let input = document.getElementsByName("conv")[0];
+// input.addEventListener("input", function (){
+//     let oldP = document.querySelector("p");
+//     if (oldP) oldP.remove();
+//     let p = document.createElement("p");
+//     let kg = input.value;
+//     let funt = kg*2.20462;
+//     p.innerText = kg + " кг = " + funt + " фунтов";
+//     document.body.append(p);
+//     }
+// )
+
+//---------------------7------------------
+//В localStorage зберігаються масиви. Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає в нього об’єкт
+//
+// сигнатура функції –
+//
+// addToLocalStorage(arrayName:string,objToAdd:any{}):void
 
 
+// function addToLocalStorage(arrayName, objToAdd){
+//
+//     let arr = JSON.parse(localStorage.getItem(arrayName));
+//     arr.push(objToAdd);
+//     localStorage.setItem(arrayName, JSON.stringify(arr));
+// }
+//
+// addToLocalStorage("sessionsList", {name:"Nica", age: 46});
+
+//------------------------8--------------------
+
+//Створити 3 інпута та кнопку. Один визначає кількість рядків, другий – кількість ячеєк, третій – вміст ячеєк.
+//
+// При натисканні кнопки вся ця інформація зчитується і формується табличка з відповідним вмістом.
+
+// let f4 = document.getElementById("f4");
+// f4.addEventListener("submit",function (ev){
+//     ev.preventDefault();
+//     let oldDivGrid = document.querySelector("div");
+//     if (oldDivGrid){
+//         oldDivGrid.remove();
+//     }
+//     let divGrid = document.createElement("div");
+//     let inputLine = document.getElementById("numLine");
+//     let inputColumn = document.getElementById("numColumn");
+//     let inputValue = document.getElementById("value");
+//     divGrid.setAttribute("style", `display: grid; grid-template-columns: repeat(${+inputColumn.value}, 200px); grid-template-rows: repeat(${+inputLine.value}, 200px);border: 3px solid black; gap: 2px;; background-color: black; width: fit-content; justify-items: center; align-items: center;`)
+//     document.body.append(divGrid);
+//     let calc = +inputLine.value*inputColumn.value;
+//         for (let i = 0; i < calc; i++) {
+//             let divItem = document.createElement("div");
+//             divItem.className = "item";
+//             divItem.innerText = inputValue.value;
+//             divGrid.append(divItem);
+//         }
+//
+// }
+// );
+
+//--------------------9----------------------------
+// *** (подібне було вище, але…будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення “100грн”
+
+//при перезавантаженні сторінки до значення додається по 10грн, але !!! зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
+
+    //При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
+
+
+let time = new Date();
+let oldTime = +localStorage.getItem("time") ||0;
+let divPrice = document.getElementById("price");
+let savePrise = +localStorage.getItem("price") ||+(divPrice.textContent.replace(/\D/g, ""));
+if (oldTime === 0){
+localStorage.setItem("price", savePrise);
+localStorage.setItem("time",time.getTime());
+}
+else if (time.getTime() > +oldTime + 10000) {
+         savePrise = savePrise + 10;
+         localStorage.setItem("price", savePrise);
+         divPrice.innerText = `${localStorage.getItem("price")}   грн`;
+         localStorage.setItem("time", JSON.stringify(time.getTime()));
+     }
+
+     divPrice.textContent = savePrise + " грн";
