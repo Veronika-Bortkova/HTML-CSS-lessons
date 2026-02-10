@@ -265,19 +265,20 @@ buttonPrev.addEventListener("click", function (){
     if (lastIndexBlock>9) {
         lastIndexBlock = lastIndexBlock-10;
         localStorage.setItem("numberKey", lastIndexBlock);//79=>69
-        for (let i = lastIndexBlock + 1; i <= lastIndexBlock+10; i++) {
+        for (let i = lastIndexBlock + 1; i < lastIndexBlock+10; i++) {
             let divItem = document.createElement("div");
             divItem.innerText = `id - ${arr[i].id}  name - ${arr[i].name}`;
             divArr10.append(divItem);
         }
         //lastIndexBlock = lastIndexBlock-10;
     } else {
-        lastIndexBlock = 9;
+        lastIndexBlock = 9;//роблю для того, щоб при клике на кнопку prev, коли массив дойде до початку на екрані залишався перший блок
         for (let i = 0; i < 10; i++) {
             let divItem = document.createElement("div");
             divItem.innerText = `id - ${arr[i].id}  name - ${arr[i].name}`;
             divArr10.append(divItem);
         }
+
     }
 });
 
