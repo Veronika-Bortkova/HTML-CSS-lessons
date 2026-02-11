@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+            height: 30px;
+            font-size: 25px;
+        }
+        form{
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label:nth-of-type(2) input {
+            margin-left: 22px;
+        }
+        label:nth-of-type(3) input {
+            margin-left: 12px;
+        }
+        button {
+            width: 200px;
+            margin-left: 120px;
+            font-size: 25px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<form>
+    <label>
+        userId
+        <input type="text" name="userId" placeholder="user ID">
+    </label>
+    <label>
+        title
+        <input type="text" name="title">
+    </label>
+    <label>
+        body
+        <input type="text" name="body">
+    </label>
+    <button>save</button>
+</form>
+
+<script src="main.js"></script>
+</body>
+</html>
